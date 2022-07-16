@@ -6,7 +6,7 @@ const Navbar = ({ toggle }) => {
         <Fragment>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'>pukka</NavLogo>
+                    <NavLogo to='/'>Alexiweo</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
@@ -15,10 +15,10 @@ const Navbar = ({ toggle }) => {
                             <NavLinks to="about">About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="discover">Discover</NavLinks>
+                            <NavLinks to="discov">Projects</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="services">Services</NavLinks>
+                            <NavLinks to="services">Skills</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="signup">Sign Up</NavLinks>

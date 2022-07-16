@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
-import Video from '../../videos/video3.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1,HeroP,HeroBtnWrapper,ArrowForward,ArrowRight } from './HeroElements'
+import { HeroContainer, HeroBg, HeroContent, HeroH1,HeroName, HeroP,HeroBtnWrapper,ArrowForward,ArrowRight, SubHeading, HeroImgsWrapper} from './HeroElements'
 import {Button} from '../ButtonElement.js';
+import GitHub from '../../images/github.png';
+import LinkedIn from '../../images/linkedin.png';
+import Typewriter from "typewriter-effect";
 const HeroSection = () => {
     const [hover, setHover] = useState(false)
 
@@ -9,23 +11,35 @@ const HeroSection = () => {
         setHover(!hover)
         /*Toggle Function*/
     }
+
     return (
         <HeroContainer>
             <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4' ></VideoBg>
             </HeroBg>
             <HeroContent>
-                <HeroH1>Portfolio</HeroH1>
-                <HeroP>
-                    This is my new portfolio website. I will make changes to it.
-                </HeroP>
+                <HeroName>
+                    <Typewriter
+                        onInit={(typewriter) =>{
+                            typewriter.typeString("Hi, I'm Alex.")
+                            .callFunction(function(state) {
+                                state.elements.cursor.style.display = 'none';
+                            })
+                            .start();
+                        }}
+                    />
+                </HeroName>
+                <SubHeading>Full Stack Software Engineer</SubHeading>
                 <HeroBtnWrapper>
                     <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}
                     primary="true" dark="true">
-                        Learn More {hover ? <ArrowForward/> : <ArrowRight/>}
+                        About Me {hover ? <ArrowForward/> : <ArrowRight/>}
                     
                     </Button>
                 </HeroBtnWrapper>
+                <HeroImgsWrapper>
+                    <img src={GitHub} style={{width: '42px'}}/>
+                    <img src={LinkedIn} style={{width: '42px'}}/>
+                </HeroImgsWrapper>
             </HeroContent>
         </HeroContainer>
     )

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {MdKeyboardArrowRight,MdArrowForward,} from 'react-icons/md'
 
 export const HeroContainer = styled.div`
-    background: #0c0c0c;
+    background: #010606;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,18 +10,6 @@ export const HeroContainer = styled.div`
     padding: 0 30px;
     height: 800px;
     z-index: 1;
-
-    :before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
-        linear-gradient(180deg, rgba(0,0,0,0.2)0%, transparent 100%);
-        z-index: 2;
-    }
 
 `
 export const HeroBg = styled.div`
@@ -35,13 +23,6 @@ export const HeroBg = styled.div`
     overflow: hidden;
 `
 
-export const VideoBg = styled.video`
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #232a34;
-`
 
 export const HeroContent = styled.div`
     z-index: 3;
@@ -53,9 +34,10 @@ export const HeroContent = styled.div`
     align-items: center;
 ` 
 export const HeroH1 = styled.h1`
-    color: #fff;
-    font-size: 48px;
+    font-size: 80px;
     text-align: center;
+    color: transparent;
+	-webkit-text-stroke: 2px #fff;
 
     @media screen and (max-width: 738px){
         font-size: 40px;
@@ -64,6 +46,20 @@ export const HeroH1 = styled.h1`
         font-size: 32px;
     }
 `
+export const HeroName = styled.h1`
+    font-size: 100px;
+    text-align: center;
+    color: #fff;
+
+
+    @media screen and (max-width: 738px){
+        font-size: 40px;
+    }
+    @media screen and (max-width: 480px){
+        font-size: 32px;
+    }
+`
+
 export const HeroP = styled.p`
     margin-top: 24px;
     color: #fff;
@@ -84,6 +80,28 @@ export const HeroBtnWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 5s;
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+`
+
+export const HeroImgsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+
+    img{
+        margin: 5px;
+        animation: fadeIn 5s;
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 `
 
 export const ArrowForward = styled(MdArrowForward)`
@@ -93,4 +111,20 @@ export const ArrowForward = styled(MdArrowForward)`
 export const ArrowRight = styled(MdKeyboardArrowRight)`
     margin-left: 8px;
     font-size: 20px;
+`
+export const SubHeading = styled.p`
+    color: #6C63FF;
+    font-size: 18px;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 3px;
+    animation: fadeIn 5s;
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
 `
