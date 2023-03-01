@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { keyframes } from 'styled-components';
 export const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
@@ -40,13 +41,27 @@ export const Column2 = styled.div`
     grid-area: col2;
 `
 
+export const slideInRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
+    &.animated {
+        animation: ${slideInRight} 0.6s ease-in-out forwards;
+      }
 
 `
-
+// Lilac Purple Top Line Heading
 export const TopLine = styled.p`
     color: #6C63FF;
     font-size: 16px;
@@ -56,7 +71,9 @@ export const TopLine = styled.p`
     text-transform: uppercase;
     margin-bottom: 16px;
 `
-export const Heading = styled.h1`
+
+// Main Headings for Info Section
+export const HeadLine = styled.h1`
     margin-bottom: 24px;
     font-size: 48px;
     line-height: 1.1;
@@ -67,10 +84,11 @@ export const Heading = styled.h1`
         font-size: 32px;
     }
 `
+// About Me Paragraph
 export const Subtitle = styled.p`
     max-width: 440px;
     margin-bottom: 35px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 24px;
     color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
 `
@@ -83,8 +101,26 @@ export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
 `
+
+export const zoomIn = keyframes`
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 export const Img = styled.img`
-    width: 100%;
-    margin: 0 0 10px 0;
-    padding-right: 0;
-`
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding-right: 0;
+  transform: scale(0.9); /* Set initial scale to 0.9 */
+  &.zoomed {
+    animation: ${zoomIn} 0.6s ease-in-out forwards;
+    transform: scale(1); /* Set final scale to 1 */
+  }
+`;
+
+
+

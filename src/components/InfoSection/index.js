@@ -1,17 +1,25 @@
-import React, { Fragment } from 'react'
-import { InfoContainer,InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, ImgWrap, Img} from './InfoElements'
+import React, { Fragment, useRef, useState, useEffect} from 'react'
+import { InfoContainer,InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Subtitle, BtnWrap, ImgWrap, Img, HeadLine} from './InfoElements'
 import {Button} from '../ButtonElement.js';
-
-const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+import {useInView} from 'react-intersection-observer';
+const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
+    
+    const { ref: myRef, inView: elementIsVisible } = useInView({
+        threshold: 0.2,
+        triggerOnce: true
+      });
+    
     return (
         <Fragment>
             <InfoContainer lightBg = {lightBg} id={id}>
                 <InfoWrapper>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
-                            <TextWrapper>
+                            <TextWrapper ref={myRef} className={`${elementIsVisible ? 'animated' : ''}`}>
                                 <TopLine>{topLine}</TopLine>
-                                <Heading lightText = {lightText}>{headline}</Heading>
+                                <HeadLine lightText = {lightText}>
+                                {headLine}
+                                </HeadLine>
                                 <Subtitle darkText={darkText}>{description}</Subtitle>
                                 <BtnWrap>
                                     <Button to='home'
@@ -29,7 +37,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headline, darkT
                         </Column1>
                         <Column2>
                         <ImgWrap>
-                        <Img src={img} alt={alt}/>
+                        <Img src={img} alt={alt} ref={myRef} className={`${elementIsVisible ? 'zoomed' : ''}`}/>
                         </ImgWrap>
                         </Column2>
                     </InfoRow>
