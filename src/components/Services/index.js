@@ -1,33 +1,19 @@
-import React, { Fragment } from 'react'
-import { ServicesContainer,ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './ServicesElements'
-import Icon1 from '../../images/icon1.svg'
-import Icon2 from '../../images/icon2.svg'
-import Icon3 from '../../images/icon3.svg'
+import React, { Fragment} from 'react'
+import { ServicesContainer,ServicesH1, ServicesWrapper } from './ServicesElements'
+import gif from '../../videos/atworkgif.gif'
+import staticgif from '../../images/atworkgif_static.png'
+import HoverableCard from './HoverableCard'
 
 const Services = () => {
+
     return (
         <Fragment>
             <ServicesContainer id="skills">
-                <ServicesH1>Programming Languages & Skills</ServicesH1>
+                <ServicesH1>Projects</ServicesH1>
                 <ServicesWrapper>
-                    <ServicesCard>
-                        <ServicesIcon src={Icon1}></ServicesIcon>
-                        <ServicesH2>Java & Python </ServicesH2>
-                        <ServicesP></ServicesP>   
-                    </ServicesCard>
-
-                    <ServicesCard>
-                        <ServicesIcon src={Icon2}></ServicesIcon>
-                        <ServicesH2>React.js</ServicesH2>
-                        <ServicesP></ServicesP>   
-                    </ServicesCard>
-
-                    <ServicesCard>
-                        <ServicesIcon src={Icon3}></ServicesIcon>
-                        <ServicesH2>HTML, CSS & PHP</ServicesH2>
-                        <ServicesP></ServicesP>   
-                    </ServicesCard>
-
+                    <HoverableCard gif={gif} staticgif={staticgif}/>
+                    <HoverableCard gif={gif} staticgif={staticgif}/>
+                    <HoverableCard gif={gif} staticgif={staticgif}/>
                 </ServicesWrapper>
             </ServicesContainer>
         </Fragment>
