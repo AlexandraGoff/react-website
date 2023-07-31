@@ -79,9 +79,3 @@ export const Timeline = styled.div`
     padding: 0 30px;
     height: 800px;
 `
-
-export const Container = styled.div`
-    flex-direction: column;
-    align-items: center;
-    display: ${props => (props.show ? 'flex' : 'none' )};
-`
