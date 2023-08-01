@@ -23,30 +23,93 @@ export const zoomInBackground = keyframes`
   }
 `
 
+export const opacityFade = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+`
+
 export const StyledTimelineIcon = styled.img`
     height: 35px;
     width: auto;
-    opacity: 0.95;
+    opacity: ${props => (props.opacity)};
     cursor: pointer;
     z-index: 1; 
-    position: absolute;
-    display: ${props => (props.show ? 'block' : 'none' )};
+    position: relative;
+    align-items: center;
+    display: ${props => (props.show ? 'flex' : 'none' )};
     animation: ${zoomInFade} 3s ease-in-out;
 
 `
 export const IconBackground = styled.div`
-    background: radial-gradient(#6C63FF, #010606);
-    opacity: 0.5;
-    height: 70px;
-    width: 70px;
-    position: relative;
-    z-index: 0;
-    animation: ${zoomInBackground} 1.5s ease-in-out;
-    display: ${props => (props.show ? 'flex' : 'none' )};
-    justify-content: center; 
-    align-items: center; 
+  position: relative;
+  background: radial-gradient(#6C63FF, #010606);
+  opacity: 0.5;
+  height: 70px;
+  width: 70px;
+  z-index: 0;
+  animation: ${zoomInBackground} 1.5s ease-in-out;
+  display: ${props => (props.show ? 'flex' : 'none' )};
+  justify-content: center; 
+  align-items: center; 
 `
 
+export const TimelineHeading = styled.p`
+    line-height: 35px;
+    text-align: left;
+    position: relative;
+    font-size: 21px;
+    letter-spacing: 1.4px;
+    opacity: 0.9;
+    color: white;
+    display: ${props => (props.show ? 'flex' : 'none' )};
+    animation: fadeIn 4s ease-in;
+`
+
+export const TimelineSubheading = styled.p` 
+    text-align: left;
+    position: relative;
+    display: flex;
+    font-size: 17px;
+    line-height: 35px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    animation: fadeIn 5s;
+    color: #6C63FF;
+    display: ${props => (props.show ? 'flex' : 'none' )};
+    animation: fadeIn 4s ease-in;
+`
+
+export const Timeframe = styled.p`
+    line-height: 35px;
+    text-align: left;
+    position: relative;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    opacity: 0.9;
+    color: white;
+    display: ${props => (props.show ? 'flex' : 'none' )};
+    animation: fadeIn 4s ease-in;
+`
+
+export const Milestone = styled.div`  
+    display: flex;
+    flex-direction: row;
+
+`
+export const DescWrapper = styled.div`
+    margin-left: 85px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
 export const lineTransition = keyframes`
     from {
         height: 0px;

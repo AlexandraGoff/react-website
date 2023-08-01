@@ -113,7 +113,7 @@ export const ArrowRight = styled(MdKeyboardArrowRight)`
     font-size: 20px;
 `
 export const SubHeading = styled.p`
-    color: #6C63FF;
+    text-transform: uppercase;
     font-size: 18px;
     line-height: 35px;
     font-weight: 700;
@@ -122,7 +122,7 @@ export const SubHeading = styled.p`
     text-transform: uppercase;
     margin-top: 3px;
     animation: fadeIn 5s;
-
+    color: #6C63FF;
     @keyframes fadeIn {
         0% { opacity: 0; }
         100% { opacity: 1; }
