@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components';
+
 export const InfoContainer = styled.div`
     color: #fff;
     background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
@@ -7,8 +8,11 @@ export const InfoContainer = styled.div`
     @media screen and (max-width: 768px){
         padding: 100px 0;
     }
+    height: 100vh;
 `
 export const InfoWrapper = styled.div`
+    border-radius: 30px;
+    background: #f9f9f9;
     display: grid;
     z-index: 1;
     height: 860px;

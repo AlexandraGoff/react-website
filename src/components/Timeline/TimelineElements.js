@@ -28,23 +28,25 @@ export const opacityFade = keyframes`
     opacity: 0;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
   }
 `
 
 export const StyledTimelineIcon = styled.img`
     height: 35px;
     width: auto;
-    opacity: ${props => (props.opacity)};
+    opacity: 1;
     cursor: pointer;
     z-index: 1; 
     position: relative;
     align-items: center;
-    display: ${props => (props.show ? 'flex' : 'none' )};
     animation: ${zoomInFade} 3s ease-in-out;
 
 `
-export const IconBackground = styled.div`
+export const IconBackground = styled.div`;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background: radial-gradient(#6C63FF, #010606);
   opacity: 0.5;
@@ -52,9 +54,6 @@ export const IconBackground = styled.div`
   width: 70px;
   z-index: 0;
   animation: ${zoomInBackground} 1.5s ease-in-out;
-  display: ${props => (props.show ? 'flex' : 'none' )};
-  justify-content: center; 
-  align-items: center; 
 `
 
 export const TimelineHeading = styled.p`
@@ -65,7 +64,6 @@ export const TimelineHeading = styled.p`
     letter-spacing: 1.4px;
     opacity: 0.9;
     color: white;
-    display: ${props => (props.show ? 'flex' : 'none' )};
     animation: fadeIn 4s ease-in;
 `
 
@@ -81,7 +79,6 @@ export const TimelineSubheading = styled.p`
     margin-top: 3px;
     animation: fadeIn 5s;
     color: #6C63FF;
-    display: ${props => (props.show ? 'flex' : 'none' )};
     animation: fadeIn 4s ease-in;
 `
 
@@ -94,13 +91,13 @@ export const Timeframe = styled.p`
     letter-spacing: 1.4px;
     opacity: 0.9;
     color: white;
-    display: ${props => (props.show ? 'flex' : 'none' )};
     animation: fadeIn 4s ease-in;
 `
 
-export const Milestone = styled.div`  
+export const Milestone = styled.div`
     display: flex;
     flex-direction: row;
+    animation: ${opacityFade} 3s ease-in;
 
 `
 export const DescWrapper = styled.div`
@@ -126,8 +123,10 @@ export const StyledLine = styled.div`
     min-width: 4px;
     width: 4px;
     margin-top: 15px;
+    margin-left: 30px;
     
     &.animated {
+        animation-delay: 5s;
         animation: ${lineTransition} 1.5s ease-in forwards;
     }
 `
@@ -137,8 +136,18 @@ export const Timeline = styled.div`
     background: #010606;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     padding: 0 30px;
-    height: 800px;
+    height: 1000px;
+`
+export const TimelineBackground = styled.div`
+    background: #010606;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    height: 1000px;
+    padding-left: 200px; 
+`
+
+export const Illustration = styled.img`
+    
 `

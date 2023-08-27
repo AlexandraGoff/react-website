@@ -6,29 +6,11 @@ const Navbar = ({ toggle }) => {
         <Fragment>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'>Alexiweo</NavLogo>
+                    <NavLogo to='/'></NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
-                    <NavMenu>
-                        <NavItem>
-                            <NavLinks to="about">About</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="discov">Projects</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="services">Skills</NavLinks>
-                        </NavItem>
-                        <NavItem>
-                            <NavLinks to="signup">Sign Up</NavLinks>
-                        </NavItem>
-                    </NavMenu>
-                    
-                        <NavBtn>
-                            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-                        </NavBtn>
-                    
+                     
                 </NavbarContainer>
             </Nav>
         </Fragment>

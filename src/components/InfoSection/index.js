@@ -8,7 +8,8 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkT
         threshold: 0.2,
         triggerOnce: true
       });
-    
+
+
     return (
         <Fragment>
             <InfoContainer lightBg = {lightBg} id={id}>

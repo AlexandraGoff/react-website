@@ -31,15 +31,16 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkR)`
+    font-family: 'Libre Barcode 39 Text', cursive;
     color: white;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 84px;
     display: flex;
     align-items: center;
     margin-left: 24px;
-    font-weight: bold;
     text-decoration: none;
+    margin-top: 70px;
 `
 /*Cursor pointer indicates link*/
 export const MobileIcon = styled.div`

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {MdKeyboardArrowRight,MdArrowForward,} from 'react-icons/md'
+import Abstract from '../../images/abstract.svg'
 
 export const HeroContainer = styled.div`
     background: #010606;
@@ -8,7 +9,7 @@ export const HeroContainer = styled.div`
     align-items: center;
     position: relative;
     padding: 0 30px;
-    height: 800px;
+    height: 100vh;
     z-index: 1;
 
 `
