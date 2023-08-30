@@ -4,7 +4,7 @@ import {Link as LinkS} from 'react-scroll'
 
 /*React component, that has styles attached to it.*/
 export const Nav = styled.nav `
-    background: #000;
+    background: transparent;
     height: 80px;
     margin-top: -80px;
     display: flex;
@@ -31,16 +31,16 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(LinkR)`
-    font-family: 'Libre Barcode 39 Text', cursive;
+    font-size: 32px;
+    font-weight: bold;
     color: white;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 84px;
     display: flex;
     align-items: center;
     margin-left: 24px;
     text-decoration: none;
-    margin-top: 70px;
+    
 `
 /*Cursor pointer indicates link*/
 export const MobileIcon = styled.div`

@@ -1,10 +1,10 @@
 export const homeObjOne = {
     id: 'about',
     lightBg: true,
-    lightText: false,
+    lightText: true,
     lightTextDesc: true,
     topLine: 'Get to know me',
-    headLine: 'Who am I?',
+    headLine: 'About Me',
     description: `Hello, my name is Alex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor urna ornare lorem commodo imperdiet. Proin in augue eu dui sodales finibus. Mauris felis felis, malesuada vitae erat nec, molestie mattis ex. Sed vitae mauris a sapien tincidunt mollis. Fusce sollicitudin placerat quam, in ultrices leo tincidunt eget. `,
     buttonLabel: 'Get in touch',
     imgStart: true,

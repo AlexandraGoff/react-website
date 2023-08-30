@@ -124,7 +124,6 @@ export const StyledLine = styled.div`
     width: 4px;
     margin-top: 15px;
     margin-left: 30px;
-    
     &.animated {
         animation-delay: 5s;
         animation: ${lineTransition} 1.5s ease-in forwards;
@@ -144,7 +143,7 @@ export const TimelineBackground = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 30px;
-    height: 1000px;
+    height: 140vh;
     padding-left: 200px; 
 `
 

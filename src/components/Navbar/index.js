@@ -6,11 +6,22 @@ const Navbar = ({ toggle }) => {
         <Fragment>
             <Nav>
                 <NavbarContainer>
-                    <NavLogo to='/'></NavLogo>
+                    <NavLogo to='/'>A.</NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
-                     
+                    <NavMenu>
+                        <NavItem>
+                            <NavLinks to="about">About</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="discov">Projects</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks to="services">Skills</NavLinks>
+                        </NavItem>
+                    </NavMenu>
+                    
                 </NavbarContainer>
             </Nav>
         </Fragment>

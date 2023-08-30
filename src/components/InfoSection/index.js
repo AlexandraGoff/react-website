@@ -1,7 +1,10 @@
 import React, { Fragment, useRef, useState, useEffect} from 'react'
 import { InfoContainer,InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Subtitle, BtnWrap, ImgWrap, Img, HeadLine} from './InfoElements'
+import {ElementSeven, ElementEight} from './InfoElements'
 import {Button} from '../ButtonElement.js';
 import {useInView} from 'react-intersection-observer';
+import elementSeven from '../../images/Element7.svg'
+import elementEight from '../../images/Element8.svg'
 const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2}) => {
     
     const { ref: myRef, inView: elementIsVisible } = useInView({
@@ -13,6 +16,7 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkT
     return (
         <Fragment>
             <InfoContainer lightBg = {lightBg} id={id}>
+            
                 <InfoWrapper>
                     <InfoRow imgStart={imgStart}>
                         <Column1>

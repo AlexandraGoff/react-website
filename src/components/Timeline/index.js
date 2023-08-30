@@ -8,7 +8,7 @@ import work from '../../images/work.svg'
 import { motion } from 'framer-motion';
 import Achievement from './Achievement.js'
 import {useInView} from 'react-intersection-observer';
-import { achievementOne, achievementTwo, achievementThree } from './AchievementData.js'
+import { achievementOne, achievementTwo, achievementThree, achievementFour} from './AchievementData.js'
 const TimelineSection = () => {
 
     
@@ -23,6 +23,7 @@ const TimelineSection = () => {
         { id: 1, delay: 0 },
         { id: 2, delay: 3 },
         { id: 3, delay: 6 },
+        { id: 4, delay: 9 }
 
       ];
 
@@ -52,6 +53,7 @@ const TimelineSection = () => {
           { id === 1 ? <Achievement  {...achievementOne} /> : null}
           { id === 2 ? <Achievement {...achievementTwo}/> : null}
           { id === 3 ? <Achievement {...achievementThree}/> : null}
+          { id === 4 ? <Achievement {...achievementFour}/> : null}
           </motion.div>
           ))}
           </Timeline>

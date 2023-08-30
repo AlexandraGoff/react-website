@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 import { keyframes } from 'styled-components';
 
+
+
 export const InfoContainer = styled.div`
     color: #fff;
-    background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+    background: ${({lightBg}) => (lightBg ? '#252038' : '#010606')};
 
     @media screen and (max-width: 768px){
         padding: 100px 0;
@@ -11,11 +13,9 @@ export const InfoContainer = styled.div`
     height: 100vh;
 `
 export const InfoWrapper = styled.div`
-    border-radius: 30px;
-    background: #f9f9f9;
+    background: transparent;
     display: grid;
-    z-index: 1;
-    height: 860px;
+    height: 100vh;
     width: 100%;
     max-width: 1100px;
     margin-right: auto;
@@ -25,6 +25,7 @@ export const InfoWrapper = styled.div`
 `
 
 export const InfoRow = styled.div`
+    z-index: 5;
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
@@ -94,7 +95,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 15px;
     line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
+    color: #fff;
 `
 
 export const BtnWrap = styled.div`
@@ -116,8 +117,9 @@ export const zoomIn = keyframes`
 `;
 
 export const Img = styled.img`
+  float: right;
   width: 100%;
-  margin: 0 0 10px 0;
+  height: auto;
   padding-right: 0;
   transform: scale(0.9); /* Set initial scale to 0.9 */
   &.zoomed {
@@ -127,4 +129,50 @@ export const Img = styled.img`
 `;
 
 
+export const ElementEight = styled.img`
+    opacity: 0.3;
+    right: 5px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    animation: moveLeft 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveLeft {
+        0% {
+            
+            right: -15px;
+        }
+        50% {
+            right: 0;
+            
+        }
+        100% {
+            
+            right: -15px;
+        }
+    }
+`
+export const ElementSeven = styled.img`
+    right: 5px;
+    opacity: 0.3;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    animation: moveLeft 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveLeft {
+        0% {
+            
+            right: -15px;
+        }
+        50% {
+            right: 0;
+            
+        }
+        100% {
+            
+            right: -15px;
+        }
+    }
+  `
 

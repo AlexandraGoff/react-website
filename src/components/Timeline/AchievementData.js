@@ -25,3 +25,11 @@ export const achievementThree = {
     IconSrc: `${Briefcase}`
     
 };
+
+export const achievementFour = {
+    title: 'New Opportunity',
+    description: 'Junior Software Engineer',
+    timeframeContent: 'September 2023 – Sometime',
+    IconSrc: `${Briefcase}`
+    
+};

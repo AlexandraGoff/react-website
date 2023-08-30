@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 import {MdKeyboardArrowRight,MdArrowForward,} from 'react-icons/md'
-import Abstract from '../../images/abstract.svg'
+import DarkBG from '../../images/dark_bg.jpg'
 
 export const HeroContainer = styled.div`
-    background: #010606;
+    background: #252038;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,4 +128,126 @@ export const SubHeading = styled.p`
         0% { opacity: 0; }
         100% { opacity: 1; }
     }
+`
+
+export const BottomRightElement = styled.img`
+    margin: 0 auto;
+    opacity: 0.2;
+    z-index: 0;
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    animation: moveLeft 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveLeft {
+        0% {
+            bottom: 0;
+            right: -15px;
+        }
+        50% {
+            right: 0;
+            bottom: 0;
+        }
+        100% {
+            bottom: 0;
+            right: -15px;
+        }
+    }
+    
+`
+
+
+export const ElementTwo = styled.img`
+    opacity: 0.3;
+    right: -10px;
+    bottom: 0;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    animation: moveRight 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveRight {
+        0% {
+            bottom: 0;
+            right: -10px;
+        }
+        50% {
+            right: 0;
+            bottom: 0;
+        }
+        100% {
+            bottom: 0;
+            right: -10px;
+        }
+        }
+    }
+`
+export const ElementThree = styled.img`
+    left: -10px;
+    top: 0;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
+    opacity: 0.5;
+    
+    animation: moveAround 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveAround {
+        0% {
+            top: 0;
+            left: -10px;
+        }
+        50% {
+            left: 0;
+            top: 0;
+        }
+        100% {
+            top: 0;
+            left: -10px;
+        }
+        }
+    }
+`
+export const ElementFour = styled.img`
+    left: 0;
+    top: -10px;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    opacity: 0.5;
+    animation: moveDown 4s ease-in;
+    animation-iteration-count: infinite;
+    @keyframes moveDown{
+        0% {
+            top: -10px;
+            left: 0;
+        }
+        50% {
+            left: 0;
+            top: 0;
+        }
+        100% {
+            top: -10px;
+            left: 0;
+        }
+        }
+    }
+`
+
+export const ElementFive = styled.img`
+    opacity: 0.2;
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 0;
+    
+`
+export const ElementSix = styled.img`
+    opacity: 0.3;
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 0 auto;
+    z-index: 1;
 `
